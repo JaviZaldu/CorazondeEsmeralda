@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./Fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./Fonts/Montserrat/Montserrat-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Roca */
+@font-face {
+    font-family: 'Roca';
+    src: url('./Fonts/Roca/RocaRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roca';
+    src: url('./Fonts/Roca/RocaBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}

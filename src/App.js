@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Password from "./Views/Password/Password";
+import Oraculo from "./Views/Oraculo/Oraculo";
+import { AuthProvider } from "./AuthContext";
+import ProtectedRoute from "./ProtectedRoute";
+import './Fonts.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthProvider>
+      <div className="App">
+        <Routes>
+          <Route path="/Password" element={<Password />} />
+          <Route 
+            path="/Oraculo" 
+            element={
+              <ProtectedRoute>
+                <Oraculo />
+              </ProtectedRoute>
+            } 
+          />
+        </Routes>
+      </div>
+    </AuthProvider>
   );
 }
 
